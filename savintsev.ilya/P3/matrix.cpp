@@ -15,10 +15,11 @@ namespace savintsev
   void outputMtx(std::ostream & out, int * t, size_t m, size_t n)
   {
     out << m << ' ' << n << ' ';
-    for (size_t i = 0; i < (m * n); ++i)
+    for (size_t i = 0; i < (m * n - 1); ++i)
     {
       out << t[i] << ' ';
     }
+    out << t[m * n - 1] << '\n';
   }
   void transformMtx(int * t, size_t m, size_t n)
   {
